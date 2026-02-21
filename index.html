@@ -134,45 +134,88 @@
 
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-bottom: 40px;
         }
 
-        .video-placeholder {
-            background: #e5e7eb;
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
             border-radius: 8px;
-            aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 0.9rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
         }
 
         .reels-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            justify-items: center;
         }
 
-        .reel-placeholder {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            border-radius: 8px;
-            aspect-ratio: 9/16;
-            max-height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 0.9rem;
+        .reel-container {
+            width: 100%;
+            max-width: 400px;
         }
 
         .section-label {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
             text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-label img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .social-link:hover {
+            background: #555;
+        }
+
+        .social-link.youtube {
+            background: #FF0000;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .links-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .links-container a {
+            margin: 0 10px;
         }
 
         footer {
@@ -218,30 +261,27 @@
 
                 <p class="section-label">YouTube Videos</p>
                 <div class="video-grid">
-                    <div class="video-placeholder">
-                        <!-- Replace with: <iframe src="YOUR_YOUTUBE_EMBED_URL" frameborder="0" allowfullscreen></iframe> -->
-                        YouTube Video 1
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/_jq_fvO18Bc" allowfullscreen></iframe>
                     </div>
-                    <div class="video-placeholder">
-                        YouTube Video 2
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2hWVbaWaT9c" allowfullscreen></iframe>
                     </div>
-                    <div class="video-placeholder">
-                        YouTube Video 3
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2XscYTLZYIE" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <p class="section-label">Instagram Reels</p>
                 <div class="reels-grid">
-                    <div class="reel-placeholder">
-                        <!-- Replace with Instagram embed code -->
-                        Reel 1
+                    <div class="reel-container">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/golfcoastpilot/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:400px; min-width:280px; padding:0; width:100%;"></blockquote>
                     </div>
-                    <div class="reel-placeholder">
-                        Reel 2
-                    </div>
-                    <div class="reel-placeholder">
-                        Reel 3
-                    </div>
+                </div>
+
+                <div class="links-container">
+                    <a href="https://www.youtube.com/@golfcoastpilot" target="_blank" class="social-link youtube">Subscribe on YouTube</a>
+                    <a href="https://www.instagram.com/golfcoastpilot" target="_blank" class="social-link instagram">Follow on Instagram</a>
                 </div>
             </div>
         </main>
@@ -250,5 +290,7 @@
             &copy; 2026 Andrew Rentz. All rights reserved.
         </footer>
     </div>
+
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
