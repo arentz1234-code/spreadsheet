@@ -221,17 +221,15 @@
             border: none;
         }
 
-        .reels-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+        .instagram-container {
+            display: flex;
+            justify-content: center;
             margin-bottom: 30px;
         }
 
         .reel-container {
             width: 100%;
-            display: flex;
-            justify-content: center;
+            max-width: 400px;
         }
 
         .reel-container blockquote {
@@ -365,10 +363,6 @@
             .video-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .reels-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 700px) {
@@ -427,11 +421,6 @@
                 grid-template-columns: 1fr;
                 gap: 16px;
                 margin-bottom: 40px;
-            }
-
-            .reels-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
             }
 
             .links-container {
@@ -529,7 +518,7 @@
                     </svg>
                     Instagram
                 </p>
-                <div class="reels-grid">
+                <div class="instagram-container">
                     <div class="reel-container">
                         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/golfcoastpilot/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:12px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:400px; min-width:280px; padding:0; width:100%;"></blockquote>
                     </div>
