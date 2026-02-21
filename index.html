@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Rentz - Airplane Cost Spreadsheets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #222;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Andrew Rentz">
+    </header>
+
+    <main>
+        <h1>Airplane Cost Spreadsheets</h1>
+
+        <div class="products">
+            <div class="product">
+                <img src="1.png" alt="Cirrus SR22 Excel Business Plan">
+                <div class="product-info">
+                    <h2 class="product-title">Cirrus SR22 Excel Business Plan</h2>
+                    <p class="product-price">$14.99</p>
+                    <a href="https://buy.stripe.com/4gM14n4MlgEidCz5tr7AI00" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="2.png" alt="General Aircraft Excel Business Plan">
+                <div class="product-info">
+                    <h2 class="product-title">General Aircraft Excel Business Plan</h2>
+                    <p class="product-price">$9.99</p>
+                    <a href="https://buy.stripe.com/6oU8wPbaJ0Fk9mjg857AI01" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Andrew Rentz. All rights reserved.
+    </footer>
+</body>
+</html>
